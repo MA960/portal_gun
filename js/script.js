@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPortalCanvas();
     initImageHotspots();
     initTerminalControls();
-    initSimulation();
-    initCheckout();
 });
 
 /* ==========================================
@@ -119,40 +117,11 @@ function initTerminalControls() {
 
             setTimeout(() => {
                 btnFire.textContent = 'TEST FIRE';
-                btnFire.style.background = '';
+                btnFire.style.background = 'rgba(57,255,20,0.1)';
                 if (infoBox) {
                     infoBox.textContent = '[STABLE] Portal sequence completed successfully with zero atomic drift.';
                 }
             }, 1800);
         });
     }
-}
-
-/* ==========================================
-   4. TIMELINE SIMULATOR & CHECKOUT
-   ========================================== */
-function initSimulation() {
-    const ambitionRange = document.getElementById('ambition-range');
-    const moralityRange = document.getElementById('morality-range');
-    const simOutputBox = document.getElementById('sim-output-box');
-    if (!ambitionRange || !moralityRange || !simOutputBox) return;
-
-    function updateSim() {
-        simOutputBox.innerHTML = `
-            <strong class="output-dim">TARGET: DIMENSION J19-Z7</strong>
-            <p class="output-desc">Simulation adjusted to Ambition: ${ambitionRange.value}% | Morality: ${moralityRange.value}%. Stable reality link verified.</p>
-        `;
-    }
-    ambitionRange.addEventListener('input', updateSim);
-    moralityRange.addEventListener('input', updateSim);
-}
-
-function initCheckout() {
-    const orderForm = document.getElementById('order-form');
-    if (!orderForm) return;
-
-    orderForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Order Transmitted! 1 Trillion Galactic Credits charged and 25% Soul Equity securely bonded under Mubeen Amir ownership registry.');
-    });
 }

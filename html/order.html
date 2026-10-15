@@ -31,7 +31,7 @@
 
     <main>
         <!-- ORDER / CHECKOUT SECTION -->
-        <section class="order-section" aria-labelledby="order-heading" style="padding: 3rem 5%;">
+        <section class="order-section" aria-labelledby="order-heading" style="padding: 3rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
             
             <!-- LEFT COLUMN: TRANSACTION DETAILS & OWNERSHIP -->
             <article class="hero-intro">
@@ -61,22 +61,22 @@
             </article>
 
             <!-- RIGHT COLUMN: INTERACTIVE CHECKOUT TERMINAL -->
-            <form id="order-form" class="checkout-form">
+            <form id="order-form" class="checkout-form" style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: 12px;">
                 <h3 style="margin-bottom: 1.2rem; color: var(--neon-green); font-family: var(--font-heading); font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center;">
                     <span>[ACQUISITION MANIFEST]</span>
                     <output class="led-screen" style="font-size: 0.75rem;">C-137</output>
                 </h3>
 
                 <!-- FIELD 1: TRAVELER IDENTIFIER -->
-                <div class="form-group">
-                    <label for="buyer-name">Traveler Name / Galactic Alias:</label>
-                    <input type="text" id="buyer-name" required placeholder="e.g. Rick Sanchez / Mubeen Amir" autocomplete="off">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="buyer-name" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Traveler Name / Galactic Alias:</label>
+                    <input type="text" id="buyer-name" required placeholder="e.g. Rick Sanchez / Mubeen Amir" autocomplete="off" style="width: 100%; padding: 0.6rem; background: #0a1120; border: 1px solid var(--border-color); color: var(--text-main); border-radius: 4px;">
                 </div>
 
                 <!-- FIELD 2: PAYMENT CURRENCY SELECTOR -->
-                <div class="form-group">
-                    <label for="currency-select">Primary Payment Method:</label>
-                    <select id="currency-select" required>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="currency-select" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Primary Payment Method:</label>
+                    <select id="currency-select" required style="width: 100%; padding: 0.6rem; background: #0a1120; border: 1px solid var(--border-color); color: var(--text-main); border-radius: 4px;">
                         <option value="USD">$1,000,000,000,000 Fiat USD</option>
                         <option value="GALACTIC">1,000,000,000 Galactic Credits</option>
                         <option value="FLURBOS">3,500,000 Blips and Chitz Flurbos</option>
@@ -84,9 +84,9 @@
                 </div>
 
                 <!-- FIELD 3: TARGET HOME DIMENSION -->
-                <div class="form-group">
-                    <label for="dimension-select">Primary Base Coordinate:</label>
-                    <select id="dimension-select" required>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="dimension-select" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Primary Base Coordinate:</label>
+                    <select id="dimension-select" required style="width: 100%; padding: 0.6rem; background: #0a1120; border: 1px solid var(--border-color); color: var(--text-main); border-radius: 4px;">
                         <option value="C-137">Earth C-137 (Prime Reality)</option>
                         <option value="J19-Z7">Dimension J19-Z7 (Galactic Hub)</option>
                         <option value="35-C">Dimension 35-C (Megatree Zone)</option>
@@ -95,8 +95,8 @@
                 </div>
 
                 <!-- FIELD 4: INTERACTIVE SOUL EQUITY BOND SLIDER -->
-                <div class="form-group">
-                    <label for="soul-range" style="display: flex; justify-content: space-between;">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="soul-range" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem;">
                         <span>Metaphysical Soul Bond:</span>
                         <output id="soul-val" style="color: var(--neon-green); font-weight: bold;">25%</output>
                     </label>
@@ -115,7 +115,7 @@
                 </div>
 
                 <!-- SUBMIT BUTTON -->
-                <button type="submit" id="btn-submit-order" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 1rem;">
+                <button type="submit" id="btn-submit-order" class="btn btn-primary" style="width: 100%; margin-top: 1.2rem; padding: 1rem; background: var(--neon-green); color: #000; font-family: var(--font-heading); font-weight: bold; border: none; cursor: pointer; border-radius: 4px;">
                     AUTHORIZE $1 TRILLION TRANSFER
                 </button>
 
