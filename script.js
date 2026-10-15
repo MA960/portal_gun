@@ -1,5 +1,5 @@
 /**
- * PORTAL GUN - C-137 HOME ENGINE
+ * PORTAL GUN - SHARED ENGINE (Home & Product Info)
  * Owner: Mubeen Amir | Creator: Rick Sanchez
  */
 
@@ -61,10 +61,11 @@ function initPortalCanvas() {
     animate();
 }
 
-/* SVG Hotspots Inspection */
+/* SVG Hotspots Inspection (Home Page) */
 function initHotspots() {
     const hotspots = document.querySelectorAll('.hotspot');
     const infoBox = document.getElementById('hotspot-info-box');
+    if (!hotspots.length || !infoBox) return;
 
     hotspots.forEach(spot => {
         const updateInfo = () => {
@@ -90,7 +91,7 @@ function initHotspots() {
     });
 }
 
-/* Display Controls */
+/* Display Controls (Home Page) */
 function initControls() {
     const btnFire = document.getElementById('btn-fire');
     const btnDial = document.getElementById('btn-dial');
@@ -118,7 +119,7 @@ function initControls() {
     }
 }
 
-/* Alternate Reality Timeline Simulator */
+/* Alternate Reality Timeline Simulator (Home Page) */
 function initSimulation() {
     const ambitionRange = document.getElementById('ambition-range');
     const moralityRange = document.getElementById('morality-range');
