@@ -3,114 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C-137 Portal Gun | Product Specifications</title>
-    <link rel="stylesheet" href="style.css">
+    <title>C-137 Portal Gun | Home</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- PORTAL CANVAS OVERLAY -->
+    <!-- PORTAL BACKGROUND CANVAS -->
     <canvas id="portal-canvas" aria-hidden="true"></canvas>
 
-    <!-- HEADER / NAVIGATION -->
+    <!-- NAVIGATION HEADER -->
     <header class="navbar">
         <a href="index.html" class="logo" aria-label="Portal Gun Home">
-            <span class="logo-symbol" role="img" aria-label="Portal Icon">🌀</span>
-            <span class="logo-text">PORTAL<mark class="highlight">GUN</mark></span>
+            <span role="img" aria-label="Portal Icon">🌀</span>
+            <span>PORTAL<mark class="highlight">GUN</mark></span>
         </a>
-        
         <nav aria-label="Main Navigation">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html" class="active" aria-current="page">Product Info</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="product.html">Product Info</a></li>
                 <li><a href="order.html">Order Details</a></li>
             </ul>
         </nav>
-        
-        <aside class="header-badge" aria-label="Device Model">SPECIFICATIONS</aside>
+        <aside class="header-badge">C-137 MODEL</aside>
     </header>
 
     <main>
-        <!-- PRODUCT HERO SHOWCASE -->
-        <section class="product-hero" aria-labelledby="product-title">
-            <article class="product-intro">
-                <span class="sub-heading">HARDWARE ARCHITECTURE</span>
-                <h1 id="product-title">PRECISION CRAFTED <br><span class="gradient-text">MULTIVERSAL TECH</span></h1>
-                <p>
-                    Forged in dimension C-137, this device combines aerospace-grade titanium-alloy casing with quantum dark-matter acceleration coils. Designed to withstand extreme gravitational shifts and micro-singularity radiation.
+        <!-- HERO SECTION WITH PRODUCT IMAGE & SCHEMATIC HUD -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <article class="hero-intro">
+                <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> QUANTUM FLUID STABLE</p>
+                <h1 id="hero-heading" style="font-size: 3rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                    INTERDIMENSIONAL<br><span class="gradient-text">TRAVEL GUN</span>
+                </h1>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                    The ultimate tool for traversing the Central Finite Curve. Engineered for instant multiversal transit, infinite reality browsing, and complete dimensional sovereignty.
                 </p>
+                
+                <section class="price-container">
+                    <p class="price-tag">$1,000,000,000,000 USD</p>
+                    <p class="price-alt">or 1,000,000,000 Galactic Credits + 25% Soul Equity</p>
+                </section>
 
-                <ul class="quick-specs-list">
-                    <li><strong>Weight:</strong> 1.22 kg (Balanced Grip)</li>
-                    <li><strong>Battery:</strong> Micro-Fusion Dark Matter Cell</li>
-                    <li><strong>Range:</strong> Infinite across Central Finite Curve</li>
-                </ul>
-
-                <nav class="cta-group" aria-label="Product Actions">
-                    <a href="order.html" class="btn btn-primary">Secure Your Unit ($1T)</a>
+                <nav style="display: flex; gap: 1rem;">
+                    <a href="order.html" class="btn btn-primary">Acquire Device</a>
+                    <a href="product.html" class="btn btn-secondary">Explore Specs</a>
                 </nav>
+
+                <aside class="ownership-banner">
+                    Created by <strong>Rick Sanchez</strong> &bull; Proprietary Owned by <strong>Mubeen Amir</strong>
+                </aside>
             </article>
 
-            <!-- PRODUCT IMAGE FIGURE WITH LOCAL FILE REFERENCES -->
-            <figure class="product-media-figure">
-                <img src="portal-gun-hero.jpg" alt="High-end studio render of the C-137 Portal Gun featuring brushed steel chassis and green fluid container" class="product-showcase-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 500 400\'><rect width=\'100%\' height=\'100%\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' fill=\'%2339ff14\' font-family=\'monospace\' font-size=\'16\' text-anchor=\'middle\' dominant-baseline=\'middle\'>[PLACEHOLDER: portal-gun-hero.jpg]</text></svg>';">
-                <figcaption>Figure 1.1: Official Studio Render – Brushed Steel Edition with Toxic Green Core.</figcaption>
+            <!-- CATCHY HERO PRODUCT IMAGE & HUD DISPLAY -->
+            <figure class="device-card" style="position: relative; overflow: hidden;">
+                <figcaption class="display-header">
+                    <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">LIVE PRODUCT PREVIEW</span>
+                    <output class="led-screen" id="digital-readout">C-137</output>
+                </figcaption>
+
+                <!-- MAIN PORTAL GUN IMAGE SHOWCASE -->
+                <picture class="product-image-container" style="display: block; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #000;">
+                    <!-- Place your image path here (e.g., ../images/portal-gun.jpg) -->
+                    <img src="../images/portalgun.jfif" 
+                         alt="C-137 Portal Gun featuring glowing toxic green fluid cylinder and stainless steel casing" 
+                         style="width: 100%; height: auto; display: block; filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.25)); transition: transform 0.5s ease;"
+                         onerror="this.style.display='none'; document.getElementById('svg-fallback').style.display='block';">
+
+                    <!-- GLOW OVERLAY EFFECTS FOR LANDING PAGE IMPACT -->
+                    <div class="image-glow-ring" style="position: absolute; top: 10%; right: 10%; width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle, rgba(57,255,20,0.6) 0%, transparent 70%); pointer-events: none; animation: pulse 2s infinite;"></div>
+
+                    <!-- FALLBACK INTERACTIVE SVG BLUEPRINT IF IMAGE FILE IS ABSENT -->
+                    <svg id="svg-fallback" viewBox="0 0 500 320" class="portal-gun-svg" style="display: none; width: 100%; height: auto;">
+                        <defs>
+                            <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#39ff14" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#050b14" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="fluidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#55ff00"/><stop offset="100%" stop-color="#004411"/>
+                            </linearGradient>
+                            <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#8a99ad"/><stop offset="100%" stop-color="#1b232e"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="180" y="140" width="220" height="90" rx="15" fill="url(#metalGrad)" stroke="#687b95" stroke-width="2"/>
+                        <rect x="230" y="40" width="60" height="95" rx="8" fill="rgba(10, 30, 20, 0.6)" stroke="#8a99ad" stroke-width="3"/>
+                        <rect x="234" y="60" width="52" height="70" rx="4" fill="url(#fluidGrad)"/>
+                        <circle cx="140" cy="185" r="30" fill="url(#greenGlow)"/>
+                        <circle cx="140" cy="185" r="10" fill="#39ff14"/>
+                        <g class="hotspot" tabindex="0" role="button" data-info="Quantum Fluid Matrix: 100mL dark matter suspension.">
+                            <circle cx="260" cy="50" r="8" fill="#39ff14" opacity="0.6"/><circle cx="260" cy="50" r="4" fill="#39ff14"/>
+                        </g>
+                    </svg>
+                </picture>
+
+                <menu class="display-controls">
+                    <li><button id="btn-fire" type="button" class="control-btn">TEST EMISSION</button></li>
+                    <li><button id="btn-dial" type="button" class="control-btn">RANDOMIZE DIMENSION</button></li>
+                </menu>
+                <output id="hotspot-info-box" class="info-tooltip">Interactive C-137 Hardware Unit. Click controls to test wormhole status.</output>
             </figure>
         </section>
 
-        <!-- DETAILED TECHNICAL BREAKDOWN SECTION -->
-        <section class="specs-section" aria-labelledby="tech-breakdown-heading">
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
             <header class="section-header">
-                <span class="sub-heading">DEEP DIVE ENGINEERING</span>
-                <h2 id="tech-breakdown-heading">HARDWARE SPECIFICATIONS</h2>
+                <span class="sub-heading">CAPABILITIES</span>
+                <h2>WHAT CAN YOU DO WITH IT?</h2>
             </header>
-
-            <div class="specs-grid">
-                <!-- Spec Card 1 -->
-                <article class="spec-card">
-                    <figure class="spec-img-wrapper">
-                        <img src="portal-gun-liquid.png" alt="Close up of quantum liquid cylinder" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 200\'><rect width=\'100%\' height=\'100%\' fill=\'%230a1120\'/><text x=\'50%\' y=\'50%\' fill=\'%2339ff14\' font-family=\'monospace\' font-size=\'14\' text-anchor=\'middle\' dominant-baseline=\'middle\'>[portal-gun-liquid.png]</text></svg>';">
-                    </figure>
-                    <h3>Quantum Fluid Reservoir</h3>
-                    <p>Contains 100mL of bio-synthesized green dark-matter suspension fluid capable of sustaining 5,000 continuous portal rips before requiring isotopic recharge.</p>
-                </article>
-
-                <!-- Spec Card 2 -->
-                <article class="spec-card">
-                    <figure class="spec-img-wrapper">
-                        <img src="portal-gun-schematic.png" alt="Schematic blueprint view" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 200\'><rect width=\'100%\' height=\'100%\' fill=\'%230a1120\'/><text x=\'50%\' y=\'50%\' fill=\'%2300e5ff\' font-family=\'monospace\' font-size=\'14\' text-anchor=\'middle\' dominant-baseline=\'middle\'>[portal-gun-schematic.png]</text></svg>';">
-                    </figure>
-                    <h3>Digital Coordinate Tracker</h3>
-                    <p>Equipped with a red LED micro-LCD display synced directly to interdimensional GPS arrays, keeping your target universe coordinates locked with sub-atomic precision.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- INTERACTIVE FAQ / DEEP DIVE ACCORDIONS -->
-        <section class="faq-section" aria-labelledby="faq-heading">
-            <header class="section-header">
-                <span class="sub-heading">ENGINEERING MANUAL FAQ</span>
-                <h2 id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
-            </header>
-
-            <div class="accordion-group">
-                <details class="faq-item">
-                    <summary>What happens if I accidentally shoot a portal into a vacuum or black hole?</summary>
-                    <p>The device includes an automatic entropy dampener. If an unstable reality signature is detected, the emitter automatically seals the wormhole within 400 milliseconds to protect user cellular integrity.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>How does the 25% Soul Equity payment structure work?</summary>
-                    <p>Upon completing checkout, your interdimensional biometric signature links a minor metaphysical stake of your consciousness to the Multiverse Central Bank. This guarantees you tax-free travel across all realities without impacting your daily free will.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Can I calibrate the gun to visit dimensions where magic works?</summary>
-                    <p>Yes. By accessing the hidden firmware menu (pressing the trigger 3 times while holding the coordinate dial), you can toggle metaphysical override protocols.</p>
-                </details>
-            </div>
+            <ul class="features-grid">
+                <li>
+                    <article class="feature-card">
+                        <h3>Meet Alternate Youses</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Cross into dimensions where you made different life choices across infinite probability trees.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="feature-card">
+                        <h3>See A Different Life</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Preview alternate outcomes before taking big steps in your home reality.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="feature-card">
+                        <h3>Instant Wormholes</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Zero latency multiversal transport across galaxies and micro-verses.</p>
+                    </article>
+                </li>
+            </ul>
         </section>
     </main>
 
@@ -120,6 +142,6 @@
         <p class="ownership">Proprietary Owner: <strong>Mubeen Amir</strong></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
