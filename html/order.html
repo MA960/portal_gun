@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-137 Portal Gun | Order Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BACKGROUND CANVAS -->
+    <canvas id="portal-canvas" aria-hidden="true"></canvas>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="Portal Gun Home">
+            <span role="img" aria-label="Portal Icon">🌀</span>
+            <span>PORTAL<mark class="highlight">GUN</mark></span>
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product Info</a></li>
+                <li><a href="order.html" class="active" aria-current="page">Order Details</a></li>
+            </ul>
+        </nav>
+        <aside class="header-badge">SECURE CHECKOUT</aside>
+    </header>
+
+    <main>
+        <!-- ORDER / CHECKOUT SECTION -->
+        <section class="order-section" aria-labelledby="order-heading" style="padding: 3rem 5%;">
+            
+            <!-- LEFT COLUMN: TRANSACTION DETAILS & OWNERSHIP -->
+            <article class="hero-intro">
+                <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> ENCRYPTED TRANSACTION PROTOCOL</p>
+                <h1 id="order-heading" style="font-size: 3rem; line-height: 1.1; margin-bottom: 1rem;">
+                    ACQUIRE YOUR <br><span class="gradient-text">PORTAL GUN</span>
+                </h1>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
+                    Universal clearance guaranteed. Complete your transfer parameters below to register your device signature with the Central Finite Curve Authority.
+                </p>
+
+                <!-- PRICING SUMMARY CARD -->
+                <section class="price-container" style="margin-bottom: 1.5rem;">
+                    <p class="price-tag">$1,000,000,000,000 USD</p>
+                    <p class="price-alt">or 1,000,000,000 Galactic Credits + 25% Soul Equity Bond</p>
+                </section>
+
+                <ul style="list-style: none; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <li>✓ Zero Interdimensional Taxes or Customs Tariffs</li>
+                    <li>✓ Includes Lifetime Dark-Matter Fluid Refill Pass</li>
+                    <li>✓ Central Finite Curve Insurance Policy Included</li>
+                </ul>
+
+                <aside class="ownership-banner">
+                    Created by <strong>Rick Sanchez</strong> &bull; Proprietary Owned by <strong>Mubeen Amir</strong>
+                </aside>
+            </article>
+
+            <!-- RIGHT COLUMN: INTERACTIVE CHECKOUT TERMINAL -->
+            <form id="order-form" class="checkout-form">
+                <h3 style="margin-bottom: 1.2rem; color: var(--neon-green); font-family: var(--font-heading); font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>[ACQUISITION MANIFEST]</span>
+                    <output class="led-screen" style="font-size: 0.75rem;">C-137</output>
+                </h3>
+
+                <!-- FIELD 1: TRAVELER IDENTIFIER -->
+                <div class="form-group">
+                    <label for="buyer-name">Traveler Name / Galactic Alias:</label>
+                    <input type="text" id="buyer-name" required placeholder="e.g. Rick Sanchez / Mubeen Amir" autocomplete="off">
+                </div>
+
+                <!-- FIELD 2: PAYMENT CURRENCY SELECTOR -->
+                <div class="form-group">
+                    <label for="currency-select">Primary Payment Method:</label>
+                    <select id="currency-select" required>
+                        <option value="USD">$1,000,000,000,000 Fiat USD</option>
+                        <option value="GALACTIC">1,000,000,000 Galactic Credits</option>
+                        <option value="FLURBOS">3,500,000 Blips and Chitz Flurbos</option>
+                    </select>
+                </div>
+
+                <!-- FIELD 3: TARGET HOME DIMENSION -->
+                <div class="form-group">
+                    <label for="dimension-select">Primary Base Coordinate:</label>
+                    <select id="dimension-select" required>
+                        <option value="C-137">Earth C-137 (Prime Reality)</option>
+                        <option value="J19-Z7">Dimension J19-Z7 (Galactic Hub)</option>
+                        <option value="35-C">Dimension 35-C (Megatree Zone)</option>
+                        <option value="CRONENBERG">Cronenberg Earth (Wasteland)</option>
+                    </select>
+                </div>
+
+                <!-- FIELD 4: INTERACTIVE SOUL EQUITY BOND SLIDER -->
+                <div class="form-group">
+                    <label for="soul-range" style="display: flex; justify-content: space-between;">
+                        <span>Metaphysical Soul Bond:</span>
+                        <output id="soul-val" style="color: var(--neon-green); font-weight: bold;">25%</output>
+                    </label>
+                    <input type="range" id="soul-range" min="25" max="100" value="25" style="width: 100%; accent-color: var(--neon-green);">
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">
+                        Minimum required: 25% consciousness pledge for Multiverse Central Bank clearance.
+                    </p>
+                </div>
+
+                <!-- FIELD 5: TERMS CHECKBOX -->
+                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem;">
+                    <input type="checkbox" id="soul-transfer" required style="width: auto; margin-top: 0.3rem; accent-color: var(--neon-green);">
+                    <label for="soul-transfer" style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0;">
+                        I accept full responsibility for wormhole hazards, temporal paradoxes, and confirm proprietary rights remain registered under <strong>Mubeen Amir</strong>.
+                    </label>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" id="btn-submit-order" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 1rem;">
+                    AUTHORIZE $1 TRILLION TRANSFER
+                </button>
+
+                <!-- STATUS OUTPUT FEED -->
+                <output id="order-status-feed" style="display: none; margin-top: 1rem; padding: 0.8rem; background: #05080f; border: 1px solid var(--neon-green); color: var(--neon-green); font-size: 0.8rem; border-radius: 6px; line-height: 1.5;">
+                </output>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Multiverse Dynamics. Created by <strong>Rick Sanchez</strong>. All Rights Reserved.</p>
+        <p class="ownership">Proprietary Owner: <strong>Mubeen Amir</strong></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Inline script extension for order page slider & submission feed
+        document.addEventListener('DOMContentLoaded', () => {
+            const soulRange = document.getElementById('soul-range');
+            const soulVal = document.getElementById('soul-val');
+            const orderForm = document.getElementById('order-form');
+            const statusFeed = document.getElementById('order-status-feed');
+
+            if (soulRange && soulVal) {
+                soulRange.addEventListener('input', () => {
+                    soulVal.textContent = soulRange.value + '%';
+                });
+            }
+
+            if (orderForm && statusFeed) {
+                orderForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const buyer = document.getElementById('buyer-name').value || 'Traveler';
+                    const dim = document.getElementById('dimension-select').value;
+                    const soul = soulRange ? soulRange.value : '25';
+
+                    statusFeed.style.display = 'block';
+                    statusFeed.innerHTML = `
+                        <strong style="color: var(--neon-cyan);">[TRANSMISSION SUCCESSFUL]</strong><br>
+                        • Traveler: <strong>${buyer}</strong><br>
+                        • Base Reality: <strong>${dim}</strong><br>
+                        • Soul Bond Locked: <strong>${soul}%</strong><br>
+                        • Registry: Proprietary License assigned under <strong>Mubeen Amir</strong>.<br>
+                        <span style="color: var(--neon-green); display: block; margin-top: 0.4rem;">Your C-137 Portal Gun will be dispatched via interdimensional wormhole delivery.</span>
+                    `;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
