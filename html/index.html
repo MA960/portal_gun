@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-137 Portal Gun | Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BACKGROUND CANVAS -->
+    <canvas id="portal-canvas" aria-hidden="true"></canvas>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="Portal Gun Home">
+            <span role="img" aria-label="Portal Icon">🌀</span>
+            <span>PORTAL<mark class="highlight">GUN</mark></span>
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="product.html">Product Info</a></li>
+                <li><a href="order.html">Order Details</a></li>
+            </ul>
+        </nav>
+        <aside class="header-badge">C-137 MODEL</aside>
+    </header>
+
+    <main>
+        <!-- HERO HUD INTERACTION SECTION -->
+        <section class="hero" aria-labelledby="hero-heading" style="padding: 2rem 5%; min-height: auto;">
+            <!-- LEFT COLUMN: MINIMAL QUICK ACTION HEADLINE -->
+            <article class="hero-intro">
+                <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> ONLINE // C-137</p>
+                <h1 id="hero-heading" style="font-size: 3.5rem; line-height: 1; margin-bottom: 1rem;">
+                    THE C-137<br><span class="gradient-text">PORTAL GUN</span>
+                </h1>
+
+                <section class="price-container" style="margin-bottom: 1.5rem;">
+                    <p class="price-tag">$1,000,000,000,000</p>
+                    <p class="price-alt">1 Billion Galactic Credits + 25% Soul Equity</p>
+                </section>
+
+                <nav style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                    <a href="order.html" class="btn btn-primary" style="flex: 1;">ACQUIRE NOW</a>
+                    <a href="product.html" class="btn btn-secondary">SPECS</a>
+                </nav>
+
+                <aside class="ownership-banner">
+                    Created by <strong>Rick Sanchez</strong> &bull; Proprietary Owned by <strong>Mubeen Amir</strong>
+                </aside>
+            </article>
+
+            <!-- RIGHT COLUMN: INTERACTIVE VISUAL IMAGE TARGETING TERMINAL -->
+            <figure class="device-card" style="position: relative; border-radius: 16px; padding: 1rem; background: var(--bg-card); border: 1px solid var(--border-color);">
+                <figcaption class="display-header" style="margin-bottom: 0.8rem;">
+                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">[INTERACTIVE HARDWARE DIAGNOSTIC]</span>
+                    <output class="led-screen" id="digital-readout">C-137</output>
+                </figcaption>
+
+                <!-- IMAGE CANVAS WITH VISUAL RETICLE HOTSPOTS -->
+                <picture style="display: block; position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(57, 255, 20, 0.3);">
+                    <img src="../portalgun.jpg" 
+                         alt="C-137 Portal Gun hardware breakdown" 
+                         style="width: 100%; height: auto; display: block; object-fit: cover; filter: brightness(0.9) contrast(1.1);"
+                         onerror="this.style.display='none'; document.getElementById('svg-fallback').style.display='block';">
+
+                    <!-- TARGET RETICLE 1: FLUID CONTAINER (TOP) -->
+                    <button type="button" class="hotspot" data-info="[FLUID CANISTER] Holds 100mL dark-matter quantum liquid matrix." 
+                            style="position: absolute; top: 15%; left: 48%; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--neon-green); background: rgba(57,255,20,0.3); cursor: pointer; box-shadow: 0 0 10px var(--neon-green); transform: translate(-50%, -50%);">
+                    </button>
+
+                    <!-- TARGET RETICLE 2: RED C-137 DISPLAY (RIGHT REAR) -->
+                    <button type="button" class="hotspot" data-info="[DIMENSION DISPENSER] LCD readout synced to universal GPS coordinates." 
+                            style="position: absolute; top: 38%; left: 78%; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--neon-red); background: rgba(255,34,34,0.3); cursor: pointer; box-shadow: 0 0 10px var(--neon-red); transform: translate(-50%, -50%);">
+                    </button>
+
+                    <!-- TARGET RETICLE 3: EMITTER MUZZLE (FRONT LEFT) -->
+                    <button type="button" class="hotspot" data-info="[WORMHOLE EMITTER] Concentric particle emitter for portal ignition." 
+                            style="position: absolute; top: 52%; left: 22%; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--neon-cyan); background: rgba(0,229,255,0.3); cursor: pointer; box-shadow: 0 0 10px var(--neon-cyan); transform: translate(-50%, -50%);">
+                    </button>
+
+                    <!-- FALLBACK SVG DIAGRAM -->
+                    <svg id="svg-fallback" viewBox="0 0 500 320" class="portal-gun-svg" style="display: none; width: 100%; height: auto;">
+                        <rect x="180" y="140" width="220" height="90" rx="15" fill="#2a384c" stroke="#687b95" stroke-width="2"/>
+                        <rect x="230" y="40" width="60" height="95" rx="8" fill="rgba(10, 30, 20, 0.6)" stroke="#8a99ad" stroke-width="3"/>
+                        <circle cx="140" cy="185" r="30" fill="#39ff14"/>
+                    </svg>
+                </picture>
+
+                <!-- DYNAMIC CONTROLS -->
+                <menu class="display-controls" style="margin-top: 0.8rem;">
+                    <li><button id="btn-fire" type="button" class="control-btn" style="background: rgba(57,255,20,0.1); border-color: var(--neon-green);">TEST FIRE</button></li>
+                    <li><button id="btn-dial" type="button" class="control-btn">SHIFT TARGET REALITY</button></li>
+                </menu>
+
+                <!-- DIAGNOSTIC OUTPUT FEED -->
+                <output id="hotspot-info-box" class="info-tooltip" style="margin-top: 0.8rem; font-size: 0.8rem;">
+                    Tap any targeting node above to run system diagnostic.
+                </output>
+            </figure>
+        </section>
+
+        <!-- VISUAL HARDWARE HIGHLIGHTS (NO PARAGRAPHS) -->
+        <section class="features-section" style="padding: 3rem 5%;">
+            <ul class="features-grid">
+                <li>
+                    <article class="feature-card" style="padding: 1.5rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">🌌</p>
+                        <h3 style="font-size: 1rem;">Central Finite Curve Transit</h3>
+                    </article>
+                </li>
+                <li>
+                    <article class="feature-card" style="padding: 1.5rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">👥</p>
+                        <h3 style="font-size: 1rem;">Alternate Reality Sync</h3>
+                    </article>
+                </li>
+                <li>
+                    <article class="feature-card" style="padding: 1.5rem; text-align: center;">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</p>
+                        <h3 style="font-size: 1rem;">Zero-Latency Wormholes</h3>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Multiverse Dynamics. Created by <strong>Rick Sanchez</strong>. All Rights Reserved.</p>
+        <p class="ownership">Proprietary Owner: <strong>Mubeen Amir</strong></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
