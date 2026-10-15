@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-137 Portal Gun | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PORTAL CANVAS OVERLAY -->
+    <canvas id="portal-canvas" aria-hidden="true"></canvas>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="Portal Gun Home">
+            <span class="logo-symbol" role="img" aria-label="Portal Icon">🌀</span>
+            <span class="logo-text">PORTAL<mark class="highlight">GUN</mark></span>
+        </a>
+        
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="product.html">Product Info</a></li>
+                <li><a href="order.html">Order Details</a></li>
+            </ul>
+        </nav>
+        
+        <aside class="header-badge" aria-label="Device Model">C-137 MODEL</aside>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <article class="hero-content">
+                <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> QUANTUM FLUID STABLE</p>
+                <h1 id="hero-heading" class="hero-title">INTERDIMENSIONAL<br><span class="gradient-text">TRAVEL GUN</span></h1>
+                <p class="hero-subtitle">
+                    The ultimate tool for traversing the Central Finite Curve and beyond. Engineered for instant multiversal transit, infinite reality browsing, and complete dimensional sovereignty.
+                </p>
+                
+                <section class="price-container" aria-label="Pricing Details">
+                    <p class="price-tag">$1,000,000,000,000 USD</p>
+                    <p class="price-alt">or 1,000,000,000 Galactic Credits + 25% Soul Equity</p>
+                </section>
+
+                <nav class="cta-group" aria-label="Call to Action">
+                    <a href="order.html" class="btn btn-primary">Acquire Device</a>
+                    <a href="product.html" class="btn btn-secondary">Explore Specs</a>
+                </nav>
+
+                <aside class="ownership-banner">
+                    Created by <strong>Rick Sanchez</strong> &bull; Proprietary Owned by <strong>Mubeen Amir</strong>
+                </aside>
+            </article>
+
+            <!-- SVG SCHEMATIC / DISPLAY OF THE PORTAL GUN -->
+            <figure class="device-card" aria-labelledby="schematic-heading">
+                <figcaption class="display-header">
+                    <span id="schematic-heading" class="display-title">MODEL C-137 // SCHEMATIC VIEW</span>
+                    <output class="led-screen" id="digital-readout">C-137</output>
+                </figcaption>
+
+                <!-- CUSTOM SVG SCHEMATIC DRAWING -->
+                <figure class="svg-wrapper">
+                    <svg viewBox="0 0 500 400" class="portal-gun-svg" role="img" aria-label="Technical vector schematic of the C-137 Portal Gun featuring top fluid cylinder, metal barrel, grip, and LED display">
+                        <defs>
+                            <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#39ff14" stop-opacity="0.9"/>
+                                <stop offset="70%" stop-color="#00ff66" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#050b14" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="fluidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#55ff00"/>
+                                <stop offset="50%" stop-color="#00dd44"/>
+                                <stop offset="100%" stop-color="#004411"/>
+                            </linearGradient>
+                            <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#8a99ad"/>
+                                <stop offset="50%" stop-color="#414d5c"/>
+                                <stop offset="100%" stop-color="#1b232e"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Base Stand -->
+                        <path d="M 150 340 L 350 340 L 370 370 L 130 370 Z" fill="#131924" stroke="#2a384c" stroke-width="2"/>
+                        <rect x="230" y="280" width="40" height="60" fill="#1b232e" stroke="#2a384c" stroke-width="2"/>
+
+                        <!-- Main Body -->
+                        <rect x="180" y="160" width="220" height="90" rx="15" fill="url(#metalGrad)" stroke="#687b95" stroke-width="2"/>
+                        
+                        <!-- Grip -->
+                        <path d="M 310 245 L 340 330 L 300 330 L 285 245 Z" fill="#0d121c" stroke="#2a384c" stroke-width="2"/>
+                        <path d="M 312 255 C 315 270, 315 285, 305 310" stroke="#39ff14" stroke-width="2" fill="none"/>
+
+                        <!-- Red Digital Readout Window -->
+                        <rect x="330" y="175" width="55" height="30" rx="4" fill="#050000" stroke="#ff2222" stroke-width="1.5"/>
+                        <text x="357" y="196" fill="#ff2222" font-family="'Share Tech Mono', monospace" font-size="16" text-anchor="middle" font-weight="bold">C-137</text>
+
+                        <!-- Quantum Fluid Glass Cylinder (Top) -->
+                        <rect x="230" y="60" width="60" height="95" rx="8" fill="rgba(10, 30, 20, 0.6)" stroke="#8a99ad" stroke-width="3"/>
+                        <!-- Fluid inside -->
+                        <rect x="234" y="80" width="52" height="70" rx="4" fill="url(#fluidGrad)"/>
+                        
+                        <!-- Animated Fluid Bubbles -->
+                        <circle cx="250" cy="120" r="4" fill="#ffffff" opacity="0.7" class="bubble-anim-1"/>
+                        <circle cx="270" cy="135" r="6" fill="#ffffff" opacity="0.6" class="bubble-anim-2"/>
+                        <circle cx="258" cy="100" r="3" fill="#ffffff" opacity="0.8" class="bubble-anim-3"/>
+
+                        <!-- Front Concentric Emitter Tip -->
+                        <path d="M 180 165 L 140 180 L 140 230 L 180 245 Z" fill="#2a384c" stroke="#414d5c"/>
+                        <circle cx="140" cy="205" r="30" fill="url(#greenGlow)"/>
+                        <circle cx="140" cy="205" r="20" fill="none" stroke="#39ff14" stroke-width="3"/>
+                        <circle cx="140" cy="205" r="10" fill="#39ff14"/>
+
+                        <!-- Dynamic Interactive Hotspots -->
+                        <g class="hotspot" tabindex="0" role="button" aria-label="Fluid Tube Hotspot" data-info="Quantum Fluid Matrix: Holds 100mL of dark matter fluid.">
+                            <circle cx="260" cy="70" r="8" fill="#39ff14" opacity="0.4"/>
+                            <circle cx="260" cy="70" r="4" fill="#39ff14"/>
+                        </g>
+                        <g class="hotspot" tabindex="0" role="button" aria-label="Emitter Node Hotspot" data-info="Concentrated Emitter Node: Generates stable green wormholes.">
+                            <circle cx="140" cy="205" r="8" fill="#00e5ff" opacity="0.4"/>
+                            <circle cx="140" cy="205" r="4" fill="#00e5ff"/>
+                        </g>
+                        <g class="hotspot" tabindex="0" role="button" aria-label="LED Screen Hotspot" data-info="Dimensions Coordinate Screen: Micro-LCD tracking target timeline.">
+                            <circle cx="357" cy="190" r="8" fill="#ff2222" opacity="0.4"/>
+                            <circle cx="357" cy="190" r="4" fill="#ff2222"/>
+                        </g>
+                    </svg>
+                </figure>
+
+                <menu class="display-controls">
+                    <li><button id="btn-fire" type="button" class="control-btn glow-btn">TEST EMISSION</button></li>
+                    <li><button id="btn-dial" type="button" class="control-btn">RANDOMIZE DIMENSION</button></li>
+                </menu>
+
+                <output id="hotspot-info-box" class="info-tooltip" aria-live="polite">
+                    Hover or tap schematic nodes to inspect component specs.
+                </output>
+            </figure>
+        </section>
+
+        <!-- HIGHLIGHTED FEATURES SECTION -->
+        <section class="features-section" aria-labelledby="features-heading">
+            <header class="section-header">
+                <span class="sub-heading">MULTIVERSAL CAPABILITIES</span>
+                <h2 id="features-heading">WHAT CAN YOU DO WITH IT?</h2>
+            </header>
+
+            <ul class="features-grid">
+                <!-- Feature 1 -->
+                <li>
+                    <article class="feature-card">
+                        <p class="feature-icon" aria-hidden="true">👥</p>
+                        <h3>Meet Alternate Youses</h3>
+                        <p>Cross over into dimensions where you made different choices. Meet successful, bizarre, or warlord versions of yourself across infinite probability trees.</p>
+                    </article>
+                </li>
+
+                <!-- Feature 2 -->
+                <li>
+                    <article class="feature-card">
+                        <p class="feature-icon" aria-hidden="true">👁️</p>
+                        <h3>See A Different Life</h3>
+                        <p>Observe alternate outcomes before taking big steps. Preview how your life turns out if you chose another career, moved cities, or stayed on Earth-C-137.</p>
+                    </article>
+                </li>
+
+                <!-- Feature 3 -->
+                <li>
+                    <article class="feature-card">
+                        <p class="feature-icon" aria-hidden="true">🌌</p>
+                        <h3>Instant Wormhole Transit</h3>
+                        <p>Shoot a portal on any solid surface to open an instantaneous gateway across galaxies, dimensions, or micro-universes with zero latency.</p>
+                    </article>
+                </li>
+
+                <!-- Feature 4 -->
+                <li>
+                    <article class="feature-card">
+                        <p class="feature-icon" aria-hidden="true">🛡️</p>
+                        <h3>Central Finite Curve Shielding</h3>
+                        <p>Built-in safeguards prevent accidental transit into realities where physics don't support organic human life forms.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <!-- INTERACTIVE SIMULATION PREVIEW -->
+        <section class="simulation-section" aria-labelledby="sim-heading">
+            <article class="sim-container">
+                <header class="sim-header">
+                    <span class="sub-heading">INTERACTIVE DEMO</span>
+                    <h2 id="sim-heading">SIMULATE ALTERNATE TIMELINES</h2>
+                    <p>Use the timeline dial below to preview potential alternate life metrics before purchasing.</p>
+                </header>
+
+                <form class="sim-controls" onsubmit="event.preventDefault();">
+                    <fieldset class="slider-group">
+                        <legend>Simulate Ambition & Morality</legend>
+                        
+                        <label for="ambition-range">Ambition Level: <output id="ambition-val">75%</output></label>
+                        <input type="range" id="ambition-range" min="0" max="100" value="75">
+
+                        <label for="morality-range">Morality Alignment: <output id="morality-val">50%</output></label>
+                        <input type="range" id="morality-range" min="0" max="100" value="50">
+                    </fieldset>
+                </form>
+
+                <output class="sim-output" id="sim-output-box" aria-live="polite">
+                    <strong class="output-dim">TARGET: DIMENSION J19-Z7</strong>
+                    <p class="output-desc">In this reality, you are the Supreme Chancellor of a peaceful galactic trading union with 14 awards for intergalactic diplomacy.</p>
+                </output>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Multiverse Dynamics. Created by <strong>Rick Sanchez</strong>. All Rights Reserved.</p>
+        <p class="ownership">Proprietary Owner: <strong>Mubeen Amir</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
