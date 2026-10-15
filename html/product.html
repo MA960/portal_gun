@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-137 Portal Gun | Product Specifications</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BACKGROUND CANVAS -->
+    <canvas id="portal-canvas" aria-hidden="true"></canvas>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="Portal Gun Home">
+            <span role="img" aria-label="Portal Icon">🌀</span>
+            <span>PORTAL<mark class="highlight">GUN</mark></span>
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active" aria-current="page">Product Info</a></li>
+                <li><a href="order.html">Order Details</a></li>
+            </ul>
+        </nav>
+        <aside class="header-badge">SPECIFICATIONS</aside>
+    </header>
+
+    <main>
+        <!-- PRODUCT HERO SHOWCASE -->
+        <section class="hero product-hero" aria-labelledby="product-title" style="padding: 3rem 5%;">
+            <article class="hero-intro">
+                <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> ELITE MIL-SPEC HARDWARE</p>
+                <h1 id="product-title" style="font-size: 3rem; line-height: 1.1; margin-bottom: 1rem;">
+                    ENGINEERED FOR <br><span class="gradient-text">ABSOLUTE DOMINION</span>
+                </h1>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
+                    The definitive interdimensional transit device. Hand-forged in dimension C-137, combining titanium-alloy casing with quantum dark-matter acceleration coils.
+                </p>
+
+                <section class="price-container" style="margin-bottom: 1.5rem;">
+                    <p class="price-tag">$1,000,000,000,000 USD</p>
+                    <p class="price-alt">1 Billion Galactic Credits + 25% Soul Equity Bond</p>
+                </section>
+
+                <nav style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                    <a href="order.html" class="btn btn-primary" style="flex: 1;">ACQUIRE UNIT</a>
+                    <a href="index.html" class="btn btn-secondary">BACK TO HUD</a>
+                </nav>
+
+                <aside class="ownership-banner">
+                    Created by <strong>Rick Sanchez</strong> &bull; Proprietary Owned by <strong>Mubeen Amir</strong>
+                </aside>
+            </article>
+
+            <!-- PRODUCT DISPLAY CARD -->
+            <figure class="device-card" style="padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px;">
+                <figcaption class="display-header" style="margin-bottom: 1.0rem;">
+                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">[TACTICAL ADVANTAGES]</span>
+                    <output class="led-screen">C-137</output>
+                </figcaption>
+
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">
+                    <li style="background: rgba(57,255,20,0.05); border-left: 3px solid var(--neon-green); padding: 0.8rem; border-radius: 4px;">
+                        <strong style="color: var(--neon-green); display: block; margin-bottom: 0.2rem;">∞ Infinite Dimensional Reach</strong>
+                        Bypass standard galactic barriers and travel freely across the Central Finite Curve.
+                    </li>
+                    <li style="background: rgba(0,229,255,0.05); border-left: 3px solid var(--neon-cyan); padding: 0.8rem; border-radius: 4px;">
+                        <strong style="color: var(--neon-cyan); display: block; margin-bottom: 0.2rem;">🛡️ Quantum Shielding</strong>
+                        Prevents accidental collapse into alternate micro-universes or vacuum voids.
+                    </li>
+                    <li style="background: rgba(255,34,34,0.05); border-left: 3px solid var(--neon-red); padding: 0.8rem; border-radius: 4px;">
+                        <strong style="color: var(--neon-red); display: block; margin-bottom: 0.2rem;">👥 Alternate Life Preview</strong>
+                        Inspect alternate versions of yourself before committing to major life choices.
+                    </li>
+                </ul>
+            </figure>
+        </section>
+
+        <!-- DETAILED SPECS GRID -->
+        <section class="specs-section" style="padding: 4rem 5%; background: rgba(0,0,0,0.4);">
+            <header class="section-header">
+                <span class="sub-heading">TECHNICAL SPECIFICATIONS</span>
+                <h2>HARDWARE BLUEPRINT BREAKDOWN</h2>
+            </header>
+
+            <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <article class="spec-card" style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: var(--neon-green); margin-bottom: 0.8rem; font-size: 1.1rem;">Quantum Fluid Reservoir</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Houses 100mL of bio-synthesized green dark-matter suspension fluid capable of sustaining 5,000 continuous portal rips before requiring isotopic refill.</p>
+                </article>
+
+                <article class="spec-card" style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: var(--neon-red); margin-bottom: 0.8rem; font-size: 1.1rem;">Red LED Coordinate Tracker</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Syncs directly to universal GPS arrays, locking target timeline coordinates instantly with zero drift tolerance.</p>
+                </article>
+
+                <article class="spec-card" style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 0.8rem; font-size: 1.1rem;">Concentric Emitter Muzzle</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Heavy-duty titanium iris ring designed to project instantaneous emerald wormholes on any solid physical surface.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FUNCTIONAL UNIVERSE SELECTOR & IMAGE BREAKDOWN SECTION -->
+        <section class="universe-section" style="padding: 4rem 5%;">
+            <header class="section-header">
+                <span class="sub-heading">INTERACTIVE SIMULATION MODULE</span>
+                <h2>SUPPORTED UNIVERSE MATRIX</h2>
+            </header>
+
+            <div class="universe-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
+                
+                <!-- LEFT: IMAGE DISPLAY -->
+                <figure style="margin: 0; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(57,255,20,0.3); background: #000;">
+                    <img src="../portalgun.jpg" 
+                         alt="C-137 Portal Gun Hardware Unit" 
+                         style="width: 100%; height: auto; display: block; filter: drop-shadow(0 0 15px rgba(57,255,20,0.3));"
+                         onerror="this.style.display='none';">
+                    <figcaption style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(5,8,15,0.85); padding: 0.5rem 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--neon-green);">
+                        UNIT SERIAL: C-137 // CERTIFIED MULTIVERSAL READY
+                    </figcaption>
+                </figure>
+
+                <!-- RIGHT: UNIVERSE SELECTOR CONTROLS -->
+                <article class="universe-controls-box" style="font-family: var(--font-mono);">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 1rem; font-family: var(--font-heading);">SELECT DESTINATION REALITY</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                        Test target coordinate profiles pre-loaded into the hardware's internal memory bank:
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;">
+                        <button type="button" class="control-btn dim-btn" data-dim="C-137" data-desc="Earth C-137: Prime baseline reality. Stable oxygen-nitrogen atmosphere, low Cronenberg mutation risk." style="text-align: left; padding: 0.8rem 1rem;">
+                            🟢 DIMENSION C-137 (Prime Earth)
+                        </button>
+                        <button type="button" class="control-btn dim-btn" data-dim="J19-Z7" data-desc="Dimension J19-Z7: Advanced interplanetary trading union. Zero currency inflation, high diplomatic security." style="text-align: left; padding: 0.8rem 1rem;">
+                            🔵 DIMENSION J19-Z7 (Galactic Union)
+                        </button>
+                        <button type="button" class="control-btn dim-btn" data-dim="CRONENBERG" data-desc="Cronenberg World: Post-apocalyptic mutation zone. Mantis-people dominance, high organic survival hazard." style="text-align: left; padding: 0.8rem 1rem;">
+                            🔴 CRONENBERG WASTELAND (Warning)
+                        </button>
+                    </div>
+
+                    <output id="universe-output" style="display: block; background: #05080f; border-left: 3px solid var(--neon-green); padding: 1rem; font-size: 0.85rem; color: var(--text-main); border-radius: 4px;">
+                        Select a dimension above to load physical safety parameters and atmospheric reports.
+                    </output>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Multiverse Dynamics. Created by <strong>Rick Sanchez</strong>. All Rights Reserved.</p>
+        <p class="ownership">Proprietary Owner: <strong>Mubeen Amir</strong></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Inline interactive hook for universe selector on product page
+        document.addEventListener('DOMContentLoaded', () => {
+            const dimButtons = document.querySelectorAll('.dim-btn');
+            const outputBox = document.getElementById('universe-output');
+            
+            dimButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const dim = btn.getAttribute('data-dim');
+                    const desc = btn.getAttribute('data-desc');
+                    outputBox.innerHTML = `<strong style="color: var(--neon-green);">TARGET LOCKED [${dim}]:</strong><br>${desc}`;
+                    outputBox.style.borderColor = dim === 'CRONENBERG' ? 'var(--neon-red)' : 'var(--neon-green)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
